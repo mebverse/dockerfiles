@@ -24,7 +24,7 @@ jobs:
       - name: Deploy to Divio
         run: |
           divio login ${{ secrets.DIVIO_TOKEN }}
-          divio app deploy test --remote-id ${{ secrets.DIVIO_WEBSITE_ID }} --build-mode FORCE
+          divio app deploy test --remote-id ${{ secrets.DIVIO_WEBSITE_ID }} --build
 
       - name: Test if website is reachable
         run: |
